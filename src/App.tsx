@@ -10,7 +10,7 @@ import MainPage from "./pages/MainPage";
 import DestinationPage from "./pages/DestinationPage";
 import AuthPage from "./pages/AuthPage";
 import LogInPage from "./pages/LogInPage";
-
+import ProfilePage from "./pages/ProfilePage";
 function App() {
  /* const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
@@ -36,6 +36,7 @@ function App() {
       <Route path={'/auth'} element={<AuthPage/>}/>
       <Route path={'/login'} element={<LogInPage/>}/>
       <Route path={'/destination/:id'} element={<DestinationPage/>}/>
+      <Route path={'/user/:id'} element={<ProfilePage/>}/>
     </Routes>
     </div>
   );

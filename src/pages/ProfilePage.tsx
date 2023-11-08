@@ -3,7 +3,7 @@ import Footer from "@/scenes/footer";
 import Logo from "@/assets/LogoTrip.png";
 import { NavLink } from "react-router-dom";
 
-export function DestinationPage() {
+export function ProfilePage() {
     return (
     <>
     <div className= "bg-gray-20">
@@ -12,7 +12,7 @@ export function DestinationPage() {
         <NavLink to={'/'}><img alt="logo" src={Logo} /></NavLink>
     </div>
         <div className ="z-10 mt-32 md:basis-3/5 flex items-center justify-center">
-            Here comes info about Destination
+            Here comes info about UserCabinet
         </div>
         </div>
 
@@ -22,4 +22,4 @@ export function DestinationPage() {
         </>
     )
 }
-export default DestinationPage;
+export default ProfilePage;
