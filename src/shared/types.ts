@@ -3,6 +3,8 @@ export enum SelectedPage {
   Benefits = "benefits",
   OurDestinations = "ourdestinations",
   ContactUs = "contactus",
+  LogIn = "login",
+  AuthPage = "register"
 }
 
 export interface BenefitType {
@@ -17,7 +19,7 @@ export interface DestinationType {
   image: string;
 }
 
-export interface IComment {
+export interface Comment {
   id: number
   comment: string
   created: string
@@ -25,3 +27,4 @@ export interface IComment {
     username: string
   }
 }
+

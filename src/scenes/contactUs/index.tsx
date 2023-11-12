@@ -3,6 +3,8 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import ContactUsPageGraphic from "@/assets/experience.png";
 import HText from "@/shared/HText";
+import { useRef } from "react";
+
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -24,6 +26,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
       e.preventDefault();
     }
   };
+  
 
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
@@ -66,7 +69,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+              action="https://formsubmit.co/85634dbaa3722bffb498a7dbdf380817"
               method="POST"
             >
               <input
@@ -86,7 +89,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 </p>
               )}
 
-              <input
+              <input 
+            
                 className={inputStyles}
                 type="text"
                 placeholder="EMAIL"

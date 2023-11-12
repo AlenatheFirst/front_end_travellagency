@@ -11,6 +11,7 @@ import DestinationPage from "./pages/DestinationPage";
 import AuthPage from "./pages/AuthPage";
 import LogInPage from "./pages/LogInPage";
 import ProfilePage from "./pages/ProfilePage";
+import { SelectedPage } from "./shared/types";
 function App() {
  /* const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
@@ -33,10 +34,12 @@ function App() {
     <div className="app bg-gray-20">
     <Routes>
       <Route path={'/'} element={<MainPage/>}/>
-      <Route path={'/auth'} element={<AuthPage/>}/>
+      <Route path={'/auth'} element={<AuthPage setSelectedPage={function (value: SelectedPage): void {
+          throw new Error("Function not implemented.");
+        } }/>}/> 
       <Route path={'/login'} element={<LogInPage/>}/>
-      <Route path={'/destination/:id'} element={<DestinationPage/>}/>
-      <Route path={'/user/:id'} element={<ProfilePage/>}/>
+      {/* <Route path={'/destination/:id'} element={<DestinationPage/>}/>
+      <Route path={'/user/:id'} element={<ProfilePage/>}/> */}
     </Routes>
     </div>
   );

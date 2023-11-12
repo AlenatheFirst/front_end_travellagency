@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/register.png";
+import RegisterPageGraphic from "@/assets/register.png";
 import HText from "@/shared/HText";
 
 type Props = {
@@ -28,6 +28,8 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
       e.preventDefault();
     }
   }
+ 
+
 
   return (
    
@@ -37,9 +39,9 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
         <NavLink to={'/'}><img alt="logo" src={Logo} /></NavLink>
         </div>
        
-    <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
+    <section id="register" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.AuthPage)}
       >
         {/* HEADER */}
         <motion.div
@@ -74,26 +76,10 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
             <form
               target="_blank"
               onSubmit={onSubmit}
-              /*TO DO: SEND INFO TO BACK END */
               action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
               method="POST"
             >
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="NAME"
-                {...register("name", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.name && (
-                <p className="mt-1 text-primary-500">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
-                </p>
-              )}
+            
 
               <input
                 className={inputStyles}
@@ -125,8 +111,7 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
                 <p className="mt-1 text-primary-500">
                   {errors.email.type === "required" &&
                     "This field is required."}
-                  {errors.password.type === "maxLength" &&
-                    "Max length is 100 char."}
+            
                 </p>
               )}
               <input
@@ -142,8 +127,7 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
                 <p className="mt-1 text-primary-500">
                   {errors.email.type === "required" &&
                     "This field is required."}
-                  {errors.password.type === "maxLength" &&
-                    "Max length is 100 char."}
+
                 </p>
               )}
 
@@ -170,8 +154,8 @@ const AuthPage = ({ setSelectedPage }: Props) =>{
             <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
                 className="w-full"
-                alt="contact-us-page-graphic"
-                src={ContactUsPageGraphic}
+                alt="page-graphic"
+                src={RegisterPageGraphic}
               />
             </div>
           </motion.div>
